@@ -150,7 +150,7 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center w-full px-6">
+      <div className="flex-1 flex flex-col items-center justify-center w-full px-6 h-[62vh]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentItem.id}
@@ -158,10 +158,10 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -50, scale: 1.1 }}
             transition={{ type: "spring", damping: 15 }}
-            className="flex flex-col items-center gap-8"
+            className="flex flex-col items-center gap-6"
           >
             <motion.h2
-              className="text-[180px] md:text-[280px] font-black leading-none text-primary drop-shadow-2xl"
+              className="text-[180px] md:text-[220px] font-black leading-none text-primary drop-shadow-2xl"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
@@ -172,14 +172,14 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-col items-center gap-6"
+              className="flex flex-col items-center"
             >
-              <h3 className="text-5xl md:text-7xl font-bold tracking-tight">
+              <h3 className="text-4xl md:text-6xl font-bold tracking-tight">
                 {currentItem.word}
               </h3>
 
               <motion.div
-                className="text-[150px] md:text-[200px]"
+                className="text-[120px] md:text-[160px]"
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
               >
@@ -191,12 +191,12 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
       </div>
 
       {/* Main Navigation Controls */}
-      <div className="w-full p-12 flex items-center justify-center gap-8 md:gap-16 z-10">
+      <div className="w-full p-14 flex items-center justify-center gap-8 md:gap-16 z-10">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={prevSlide}
-          className="p-6 bg-secondary text-secondary-foreground rounded-[2rem] shadow-xl"
+          className="p-4 bg-secondary text-secondary-foreground rounded-[2rem] shadow-xl"
         >
           <ChevronLeft className="w-12 h-12" />
         </motion.button>
@@ -205,16 +205,16 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={playPronunciation}
-          className="p-8 bg-primary text-primary-foreground rounded-[2.5rem] shadow-2xl"
+          className="p-4 bg-primary text-primary-foreground rounded-[2.5rem] shadow-2xl"
         >
-          <Volume2 className="w-16 h-16" />
+          <Volume2 className="w-14 h-14" />
         </motion.button>
 
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={nextSlide}
-          className="p-6 bg-secondary text-secondary-foreground rounded-[2rem] shadow-xl"
+          className="p-4 bg-secondary text-secondary-foreground rounded-[2rem] shadow-xl"
         >
           <ChevronRight className="w-12 h-12" />
         </motion.button>

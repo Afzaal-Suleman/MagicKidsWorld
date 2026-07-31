@@ -28,13 +28,13 @@ export const ThemeSwitcher = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/40 backdrop-blur-sm"
+            className="absolute top-64 inset-0 z-50 flex items-center justify-center p-6"
           >
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              className="bg-background w-full max-w-4xl max-h-[80vh] overflow-y-auto rounded-[3rem] p-8 relative shadow-2xl border-4 border-primary/20"
+              className="bg-background w-full max-w-4xl max-h-[80vh] overflow-y-auto  p-8 relative shadow-2xl border-4 border-primary/20"
             >
               <button
                 onClick={() => setIsOpen(false)}

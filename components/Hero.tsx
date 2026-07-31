@@ -9,7 +9,7 @@ export const Hero = () => {
   const { activeTheme } = useTheme();
 
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+    <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center pt-4 px-6 overflow-hidden">
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
