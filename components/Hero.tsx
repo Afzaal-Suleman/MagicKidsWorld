@@ -32,7 +32,7 @@ export const Hero = () => {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
-        className="text-5xl md:text-8xl font-black mb-6 tracking-tight"
+        className="text-5xl md:text-7xl font-black mb-6 tracking-tight"
       >
         Welcome to your <br />
         <span className="text-primary">{activeTheme.name}!</span>
