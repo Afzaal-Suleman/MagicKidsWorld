@@ -150,7 +150,7 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-center w-full px-6 h-[62vh]">
+      <div className="flex-1 flex flex-col items-center justify-center w-full px-6 h-[60vh] md:pb-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentItem.id}
@@ -179,7 +179,7 @@ export const PresentationEngine = ({ items, title }: PresentationEngineProps) =>
               </h3>
 
               <motion.div
-                className="text-[120px] md:text-[160px]"
+                className="text-[140px] md:text-[160px]"
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
               >
